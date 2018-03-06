@@ -26,7 +26,7 @@ leia (a)
   
 //Cálculo do Delta
 //Condição: delta < 0
-  delta <- (b * b) -4 * a * c
+  delta <- (b ^ 2) -4 * a * c
    se delta<0 entao
      escreval("A equação não possui raiz real")
      fimalgoritmo
