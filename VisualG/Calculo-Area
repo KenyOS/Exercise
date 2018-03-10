@@ -12,12 +12,15 @@ area : real
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
+Repita
+Limpatela
 Escreval("Digite (Q) para Quadrado.")
 Escreval("Digite (R) para Retângulo.")
 Escreval("Digite (T) para Triângulo.")
 Escreval("Digite (P) para Trapézio.")
 Escreval("Digite (L) para Losango.")
 Escreval("Digite (C) para Círculo.")
+Escreval("Digite (X) para Sair.")
 Escreval()
 Leia(opcao)
 escolha opcao
@@ -61,9 +64,16 @@ escolha opcao
     Leia(r)
     area := pi * (r ^ 2)
     Escreval("A área do Círculo é: ", area)
+    caso "X"
   outrocaso    // - NDA -
     Escreval("Opção INVÁLIDA!")
   
 fimescolha
-
+   se opcao <> "X" entao
+      Escreval("")
+      Escreva("Pressione <Enter> para continuar...")
+      Escreval("")
+      Leia(Enter)
+   fimse
+   ate (opcao ="X")
 Fimalgoritmo
