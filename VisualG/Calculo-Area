@@ -59,7 +59,7 @@ escolha opcao
   caso "C"
     Escreva("Digite o raio do Círculo.")
     Leia(r)
-    area := pi * (r*r)
+    area := pi * (r ^ 2)
     Escreval("A área do Círculo é: ", area)
   outrocaso    // - NDA -
     Escreval("Opção INVÁLIDA!")
