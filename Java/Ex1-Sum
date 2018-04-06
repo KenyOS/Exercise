@@ -1,0 +1,29 @@
+import java.util.Scanner;
+	
+public class Ex1 
+{
+
+	public static void main(String[] args) 
+	{
+    Scanner teclado;
+    int x, y, z;
+    int result;
+    
+    teclado = new Scanner(System.in);  //Leitura em System.in
+	System.out.println("Enter the first number: ");
+	x = teclado.nextInt();
+	System.out.println("Enter the second number: ");
+	y = teclado.nextInt();
+	System.out.println("Enter the third number: ");
+	z = teclado.nextInt();
+	
+	result = x + y + z;
+	
+	System.out.print("The result of this sum is: " + result);
+	
+	teclado.close();
+     
+
+	}
+
+}
