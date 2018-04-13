@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class ex4
+{
+
+	public static void main(String[] args) 
+	{
+		
+		double a, b, c;
+		double delta, X1, X2;
+		
+		Scanner reader;
+		
+		 reader = new Scanner(System.in);
+			System.out.println("Enter the number of A: ");
+			a = reader.nextInt();
+			System.out.println("Enter the number of B: ");
+			b = reader.nextInt();
+			System.out.println("Enter the number of C: ");
+			c = reader.nextInt();
+			
+		delta = Math.pow(b, 2) - (4*a*c);
+			System.out.println("delta é " + delta);
+			
+			if (delta <0)
+			{
+				System.out.println("não existe raiz");
+			}
+			else
+			{
+				if (delta ==0)
+				{
+					X1 = -b / (2*a);
+					X2 = X1;
+					System.out.print("As duas raizes são iguais: ");
+					System.out.print("x1= x2= " + X1);
+				}
+				else
+				{
+			
+			X1 = (-b - Math.sqrt(delta)) / (2*a);
+			X2 = (-b + Math.sqrt(delta)) / (2*a);
+			System.out.println("X1 é " + X1);
+			System.out.println("X2 é " + X2);
+				}
+			}
+
+	}
+
+}
