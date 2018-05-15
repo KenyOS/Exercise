@@ -1,4 +1,4 @@
-//By Rafa
+//By Rafael Monti Rosa
 
 package btc;
 
