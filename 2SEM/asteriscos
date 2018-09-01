@@ -1,0 +1,40 @@
+package ex;
+
+import java.util.Scanner;
+public class ex1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		//int size;
+		System.out.print("Type a phrase. ");
+		String str = scan.nextLine();
+		
+		
+		//int size = str.length();
+		
+		str = str.toUpperCase();
+		char phraselist[] = str.toCharArray();
+		
+		for (int i = 0; i < str.length(); i++) 
+		{
+			char letter = str.charAt(i);
+					if ( letter == 'A' ||
+						 letter == 'E' || 
+						 letter == 'I' ||
+						 letter == 'O' ||
+						 letter == 'U')
+					{
+						str = str.replace(Character.toString(letter),  "*");
+						
+					}
+		}
+		System.out.println(str);		
+		
+		
+		
+
+		scan.close();
+	}
+
+}
