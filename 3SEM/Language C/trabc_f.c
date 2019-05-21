@@ -11,59 +11,66 @@ struct Cad_Cliente{
 
 typedef struct Cad_Cliente TipoCliente;
 
-TipoCliente dados[NCLIENTES];
+TipoCliente clientes[NCLIENTES];
 
-int Le_Registros(TipoCliente dados[NCLIENTES])
-{   	
+int Le_Registros(TipoCliente clientes[NCLIENTES], int *num)
+{   
+    *num = 0;
     int i;
     for(i=0; i<NCLIENTES; i++){
 			 printf("Digite o nome do cliente:\n");
-			 scanf("%s",dados[i].nome);
+			 scanf("%s",clientes[*num].nome);
 			 fflush(stdin);
 			 printf("Digite a renda \n");
-			 scanf("%f",&dados[i].renda);
+			 scanf("%f",&clientes[*num].renda);
 			 fflush(stdin);
 			 printf("Informe a escolaridade: \n (f) Fundamental \n (m) Medio \n (s) Superior \n");
-			 scanf("%c", &dados[i].escolaridade);
+			 scanf("%c", &clientes[*num].escolaridade);
 			 fflush(stdin);
 	}
-  return(i);
+  return(*num);
 }
     
-char Renda_Inferior_5mil()
+void Renda_Inferior_5mil(TipoCliente clientes[NCLIENTES], int *num, char Nomes_ate_5mil[NCLIENTES], int *cont)
 {
 	  float inferior;
-	  inferior = dados[0].renda;
+	  inferior = clientes[0].renda;
 	  int i;
-	  char nomes_ate_5mil[50];
-	  int count;
+	  *cont=0;
 	  
 	  for(i=0;i<NCLIENTES;i++)
     {
       //Escolaridade Superior e renda menor que R$ 5.000,00
-      if(dados[i].escolaridade == 's' || dados[i].escolaridade =='S' && dados[i].renda < 5000)
+      if(clientes[i].escolaridade == 's' || clientes[i].escolaridade =='S' && clientes[i].renda < 5000)
       {
-        nomes_ate_5mil[i] = dados[i].nome;
-        count++;
+        *cont++;
       }
-		},
-	  return(nome_inferior);
+		};
 }
 
-float Maior_e_Menor_Renda()
+void Maior_e_Menor_Renda(TipoCliente clientes[NCLIENTES], int *num, float pos_maior, float pos_menor)
 {
-	  float pos_maior;
-	  maior = dados[0].renda;
-	  int i;
-	  for(i=0;i<NCLIENTES;i++){
-			if(dados[i].renda > pos_maior){
-				pos_maior = dados[i].renda;
+	  int i = 0;
+	  pos_menor = clientes[i].renda;
+      pos_maior = clientes[i].renda;
+	  
+	  for(i=0;i<*num;i++){
+			if(clientes[i].renda > pos_maior){
+				pos_maior = clientes[i].renda;
 				}
-    }
+      }
+       for(i=0;i<*num;i++){
+			if(clientes[i].renda < pos_menor){
+				pos_menor = clientes[i].renda;
+				}
+      }
     
 
-	  return(pos_maior, &pos_menor);
 }
 
-int main(){
+void Exibir_Nomes(char Nomes_ate_5mil)
+{
+    
+}
 
+int main(){}
