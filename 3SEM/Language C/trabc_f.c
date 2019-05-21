@@ -26,7 +26,7 @@ void Le_Registros(TipoCliente clientes[NCLIENTES], int *num)
 			 fflush(stdin);
 			 printf("Informe a escolaridade: \n (f) Fundamental \n (m) Medio \n (s) Superior \n");
 			 scanf("%c", &clientes[*num].escolaridade);
-			 fflush(stdin);
+			 getchar();
 	}
 }
     
@@ -90,6 +90,4 @@ int main()
 	Renda_Inferior_5mil(clientes, &num, Nomes_ate_5mil, &cont);
 	
 	Maior_e_Menor_Renda(clientes, &num, pos_maior, pos_menor);
-	
-	Exibir_Nomes(Nomes_ate_5mil, &cont);	
 }
